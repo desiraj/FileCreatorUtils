@@ -1,4 +1,4 @@
-package org.fileCreatorUtils.download;
+package org.filecreatorutils.download;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -64,7 +64,7 @@ public class DownloadFilesFromUrl {
 			System.out.println("Descargando archivo: " + url);
 			try (BufferedInputStream inputStream = new BufferedInputStream(new URL(MAIN_DIRECTORY + url).openStream());
 					FileOutputStream fileOS = new FileOutputStream(MAIN_FOLDER + url)) {
-				final byte data[] = new byte[1024];
+				final byte[] data = new byte[1024];
 				int byteContent;
 				while ((byteContent = inputStream.read(data, 0, 1024)) != -1) {
 					fileOS.write(data, 0, byteContent);
